@@ -43,4 +43,8 @@ public class BrandResource {
         this.brandDao.removeBrandById(id);
         return id;
     }
+
+    public void createTable() {
+        this.brandDao.createBrandTable();
+    }
 }
