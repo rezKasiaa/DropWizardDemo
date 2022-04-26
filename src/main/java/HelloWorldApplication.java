@@ -35,11 +35,13 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
                 "postgresql");
 
         final BrandDAO brandDao = jdbi.onDemand(BrandDAO.class);
+        brandDao.createBrandTable();
 
         final TemplateHealthCheck healthCheck =
                 new TemplateHealthCheck(configuration.getTemplate());
         environment.healthChecks().register("template", healthCheck);
         environment.jersey().register(resource);
         environment.jersey().register(new BrandResource(brandDao));
+
     }
 }

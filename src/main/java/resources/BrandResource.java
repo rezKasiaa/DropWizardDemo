@@ -31,7 +31,7 @@ public class BrandResource {
     }
 
     @POST
-    public Brand addEmployee(@Valid Brand brand) {
+    public Brand addBrand(@Valid Brand brand) {
         Long brandID = this.brandDao.addBrand(brand);
         brand.setId(brandID);
         return brand;

@@ -30,5 +30,10 @@
             <artifactId>dropwizard-jetty</artifactId>
             <version>${dropwizard.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.25</version>
+        </dependency>
     </dependencies>
 </project>
