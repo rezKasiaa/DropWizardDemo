@@ -15,7 +15,7 @@ public interface BrandDAO {
             "                            );")
     void createBrandTable();
 
-    @SqlUpdate("INSERT INTO brand (id, \"name\") VALUES (:id, :name)")
+    @SqlUpdate("INSERT INTO brand VALUES (:id, :name)")
     @GetGeneratedKeys
     Long addBrand(@BindBean Brand brand);
 
