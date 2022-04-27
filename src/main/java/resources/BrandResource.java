@@ -39,7 +39,7 @@ public class BrandResource {
 
     @DELETE
     @Path("/remove/{id}")
-    public Long removeEmployee(@PathParam("id") Long id) {
+    public Integer removeEmployee(@PathParam("id") Integer id) {
         this.brandDao.removeBrandById(id);
         return id;
     }

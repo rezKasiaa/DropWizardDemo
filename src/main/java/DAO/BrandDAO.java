@@ -26,6 +26,6 @@ public interface BrandDAO {
     Brand getById(@Bind("id") Long id);
 
     @SqlUpdate("DELETE FROM brand WHERE id = :id")
-    Long removeBrandById(@Bind("id") Long id);
+    Integer removeBrandById(@Bind("id") Integer id);
 }
 
