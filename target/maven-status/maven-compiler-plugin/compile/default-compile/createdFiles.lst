@@ -1,0 +1,8 @@
+resources/HelloWorldResources.class
+DAO/BrandDAO.class
+com/demo/HelloWorldApplication.class
+healthCheck/TemplateHealthCheck.class
+resources/BrandResource.class
+api/Brand.class
+com/demo/HelloWorldConfiguration.class
+api/Saying.class

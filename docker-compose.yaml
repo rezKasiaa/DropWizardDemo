@@ -1,0 +1,31 @@
+networks:
+  microsvc-local:
+    external: false
+services:
+  postgres:
+    image: postgres:13
+    container_name: postgres_dropwizard
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - 5432:5432
+    networks:
+      microsvc-local:
+        aliases:
+          - postgres.demo
+
+  dropwizard_demo:
+    image: dropwizard_demo
+    build: .
+    container_name: dropwizard_demo
+    environment:
+      - DB_URL=jdbc:postgresql://postgres:5432/postgres
+    ports:
+      - 8080:8080
+    networks:
+      microsvc-local:
+        aliases:
+          - postgres.demo
+
